@@ -43,7 +43,7 @@ button {
   min-height: 92vh;
   background:
     linear-gradient(90deg, rgba(18, 32, 27, 0.88), rgba(18, 32, 27, 0.62) 43%, rgba(18, 32, 27, 0.18)),
-    url("assets/kerygma-hero.png") center / cover;
+    url("kerygma-hero.png") center / cover;
   color: var(--white);
 }
 
