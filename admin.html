@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administrador | Kerygma Libros</title>
+    <meta name="description" content="Panel administrador para agregar libros a Kerygma Libros." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <nav class="nav admin-nav" aria-label="Navegacion administrador">
+        <a class="brand" href="index.html" aria-label="Kerygma Libros">
+          <span class="brand-mark">K</span>
+          <span>
+            <strong>Kerygma Libros</strong>
+            <small>Administrador</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Ver pagina del cliente</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="admin-section admin-dashboard" id="admin">
+        <div class="admin-copy">
+          <p class="eyebrow">Panel administrador</p>
+          <h1>Agregar libros al catalogo</h1>
+          <p>
+            Registra el titulo, precio, portada y enlace de Mercado Libre. Los
+            libros agregados aqui se muestran en la pagina del cliente desde este
+            mismo navegador.
+          </p>
+          <a class="button secondary admin-preview" href="index.html">Abrir pagina del cliente</a>
+        </div>
+
+        <form class="book-form" id="bookForm">
+          <label for="bookTitle">
+            Titulo
+            <input id="bookTitle" name="title" required placeholder="Ej. Biblia de estudio" />
+          </label>
+          <label for="bookAuthor">
+            Autor o editorial
+            <input id="bookAuthor" name="author" required placeholder="Ej. Editorial Vida" />
+          </label>
+          <label for="bookCategory">
+            Categoria
+            <select id="bookCategory" name="category" required>
+              <option>Biblias</option>
+              <option>Devocionales</option>
+              <option>Teologia</option>
+              <option>Familia</option>
+            </select>
+          </label>
+          <label for="bookPrice">
+            Precio
+            <input id="bookPrice" name="price" required placeholder="$399 MXN" />
+          </label>
+          <label for="bookUrl">
+            Enlace de Mercado Libre
+            <input
+              id="bookUrl"
+              name="url"
+              type="url"
+              required
+              placeholder="https://articulo.mercadolibre.com.mx/..."
+            />
+          </label>
+          <label for="bookImage">
+            Imagen de portada
+            <input id="bookImage" name="image" type="url" placeholder="https://.../portada.jpg" />
+          </label>
+          <button class="button primary" type="submit">Agregar libro</button>
+          <button class="button ghost" id="clearCustomBooks" type="button">
+            Limpiar libros agregados
+          </button>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="catalog-section admin-list">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Vista previa</p>
+            <h2>Catalogo actual</h2>
+          </div>
+          <label class="search-box">
+            <span>Buscar</span>
+            <input id="searchInput" type="search" placeholder="Titulo, autor o tema" />
+          </label>
+        </div>
+        <div class="filters" aria-label="Filtros de catalogo">
+          <button class="filter active" type="button" data-category="Todos">Todos</button>
+          <button class="filter" type="button" data-category="Biblias">Biblias</button>
+          <button class="filter" type="button" data-category="Devocionales">Devocionales</button>
+          <button class="filter" type="button" data-category="Teologia">Teologia</button>
+          <button class="filter" type="button" data-category="Familia">Familia</button>
+        </div>
+        <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Kerygma Libros</span>
+      <span>Panel administrador.</span>
+    </footer>
+
+    <script src="catalogo.js"></script>
+    <script>
+      KerygmaCatalog.mountCatalog();
+      KerygmaCatalog.mountAdminForm();
+    </script>
+  </body>
+</html>

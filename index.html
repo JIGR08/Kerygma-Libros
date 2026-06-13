@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kerygma Libros | Libreria cristiana</title>
+    <meta
+      name="description"
+      content="Kerygma Libros es una libreria cristiana con Biblias, devocionales, libros de teologia, familia y recursos para crecer en la fe."
+    />
+    <meta
+      name="keywords"
+      content="libreria cristiana, libros cristianos, biblias, devocionales cristianos, teologia cristiana, Kerygma Libros"
+    />
+    <meta name="author" content="Kerygma Libros" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Kerygma Libros | Libreria cristiana" />
+    <meta
+      property="og:description"
+      content="Biblias, devocionales y libros cristianos con compra segura por Mercado Libre."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jigr08.github.io/Kerygma-Libros/" />
+    <meta property="og:image" content="https://jigr08.github.io/Kerygma-Libros/assets/kerygma-hero.png" />
+    <meta property="og:locale" content="es_MX" />
+    <link rel="canonical" href="https://jigr08.github.io/Kerygma-Libros/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BookStore",
+        "name": "Kerygma Libros",
+        "description": "Libreria cristiana con Biblias, devocionales, libros de teologia, familia y recursos para crecer en la fe.",
+        "telephone": "+52 868 903 3372",
+        "areaServed": "Mexico",
+        "url": "https://jigr08.github.io/Kerygma-Libros/",
+        "sameAs": [
+          "https://wa.me/528689033372"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" id="inicio">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="#inicio" aria-label="Kerygma Libros">
+          <span class="brand-mark">K</span>
+          <span>
+            <strong>Kerygma Libros</strong>
+            <small>Libreria cristiana</small>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#catalogo">Catalogo</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Recursos cristianos para leer, estudiar y regalar</p>
+          <h1>Kerygma Libros</h1>
+          <p>
+            Encuentra Biblias, devocionales, libros de formacion y titulos para
+            fortalecer tu vida espiritual. Elige un libro y compra de forma segura
+            en Mercado Libre.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#catalogo">Ver catalogo</a>
+            <a class="button secondary" href="#contacto">Pedir ayuda</a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="trust-band" aria-label="Beneficios">
+        <div>
+          <strong>Compra segura</strong>
+          <span>Te dirigimos a Mercado Libre para finalizar tu pedido.</span>
+        </div>
+        <div>
+          <strong>Seleccion cristiana</strong>
+          <span>Libros para estudio biblico, familia, liderazgo y oracion.</span>
+        </div>
+        <div>
+          <strong>Atencion personalizada</strong>
+          <span>Te ayudamos a encontrar el recurso cristiano que necesitas.</span>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Catalogo</p>
+            <h2>Libros disponibles</h2>
+          </div>
+          <label class="search-box">
+            <span>Buscar</span>
+            <input id="searchInput" type="search" placeholder="Titulo, autor o tema" />
+          </label>
+        </div>
+
+        <div class="filters" aria-label="Filtros de catalogo">
+          <button class="filter active" type="button" data-category="Todos">Todos</button>
+          <button class="filter" type="button" data-category="Biblias">Biblias</button>
+          <button class="filter" type="button" data-category="Devocionales">Devocionales</button>
+          <button class="filter" type="button" data-category="Teologia">Teologia</button>
+          <button class="filter" type="button" data-category="Familia">Familia</button>
+        </div>
+
+        <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="contact-section" id="contacto">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Buscas un titulo especial?</h2>
+          <p>
+            Escribenos para ayudarte a encontrar Biblias, estudios, regalos y
+            recursos para tu iglesia o familia.
+          </p>
+        </div>
+        <a class="button primary" href="https://wa.me/528689033372" target="_blank" rel="noreferrer">
+          Contactar por WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Kerygma Libros</span>
+      <span>Fe, lectura y formacion para cada dia.</span>
+    </footer>
+
+    <script src="catalogo.js"></script>
+    <script>
+      KerygmaCatalog.mountCatalog();
+    </script>
+  </body>
+</html>

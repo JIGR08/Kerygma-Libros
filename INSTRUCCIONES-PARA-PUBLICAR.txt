@@ -1,0 +1,25 @@
+Para que Kerygma Libros aparezca en Google:
+
+1. Publica la carpeta outputs en un hosting.
+   Opciones comunes: Netlify, Vercel, GitHub Pages o un hosting con cPanel.
+
+2. Compra o conecta un dominio.
+   Ejemplo: kerygmalibros.com o kerygmalibros.com.mx.
+
+3. Tu direccion inicial con GitHub Pages sera:
+   https://jigr08.github.io/Kerygma-Libros/
+
+4. Si despues compras un dominio propio, cambia en estos archivos:
+   - index.html: reemplaza https://jigr08.github.io/Kerygma-Libros/ por tu dominio.
+   - sitemap.xml: reemplaza https://jigr08.github.io/Kerygma-Libros/ por tu dominio.
+   - robots.txt: reemplaza https://jigr08.github.io/Kerygma-Libros/sitemap.xml por tu dominio.
+
+5. Entra a Google Search Console:
+   https://search.google.com/search-console
+
+6. Agrega tu dominio o URL de GitHub Pages, verifica la propiedad y envia el sitemap:
+   https://jigr08.github.io/Kerygma-Libros/sitemap.xml
+
+Importante:
+Google no puede encontrar una pagina que solo esta guardada en tu computadora.
+Primero debe estar publicada en internet.
